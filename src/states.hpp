@@ -14,6 +14,7 @@ CRGBArray<NUM_LEDS> leds;
 bool lowBeamState = false;  // Track the previous state of the low beam
 volatile bool turnSignalActive = false;
 volatile unsigned long lastTurnSignalTime = 0;
+unsigned long previousRefreshMillis = 0;        // The last time a refresh happened
 
 
 volatile bool isLowBeamActive() {
